@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import AddItem from './components/addItem';
+import Lista from './components/lista';
+import Itens from './components/itens';
+import './styles/App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [items, setItems] = useState([]);
+
+  const addItem = (name) => {
+    const newItem = {
+      id: Date.now(),
+      name,
+      completed: false,
+    };
+    setItems((prevItems) => [...prevItems, newItem]);
+  };
+
+  const toggleComplete = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, completed: !item.completed } : item
+      )
+    );
+  };
+
+  const deleteItem = (id) => {
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const clearList = () => {
+    setItems([]);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <h1>Lista de Compras</h1>
+      <AddItem onAddItem={addItem} />
+      <Lista
+        items={items}
+        onToggleComplete={toggleComplete}
+        onDeleteItem={deleteItem}
+      />
+      <button onClick={clearList}>Limpar</button>
+    </div>
+  );
+};
 
-export default App
+export default App;

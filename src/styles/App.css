@@ -1,0 +1,46 @@
+.app {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .shopping-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .shopping-item span {
+    flex: 1;
+    text-align: left;
+  }
+  
+  button:nth-child(2) {
+    background-color: #28a745;
+  }
+  
+  button:nth-child(3) {
+    background-color: #dc3545;
+  }
+  
