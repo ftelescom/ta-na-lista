@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import AddItem from './components/addItem'; // Certifique-se de que "addItem" é exatamente como o nome do arquivo.
-import Lista from './components/lista';     // Certifique-se de que "lista" é exatamente como o nome do arquivo.
+import AddItem from './components/addItem';
+import Lista from './components/lista';
 import './styles/App.css';
+import logo from './assets/logo.png';
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -33,14 +34,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Lista de Compras</h1>
+      <img src={logo} alt="Logo da Lista de Compras" />
       <AddItem onAddItem={addItem} />
       <Lista
         items={items}
         onToggleComplete={toggleComplete}
         onDeleteItem={deleteItem}
       />
-      <button onClick={clearList}>Limpar</button>
+      <button onClick={clearList} className='btnLimpar'>Limpar</button>
     </div>
   );
 };

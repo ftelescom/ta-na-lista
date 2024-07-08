@@ -1,46 +1,107 @@
+/* Importando fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Margarine&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset básico para remover margens e definir a fonte padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilizando o corpo da página para centralizar o conteúdo */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+/* Estilos básicos para o container principal */
 .app {
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  input {
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid #007BFF;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .shopping-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-  }
-  
-  .shopping-item span {
-    flex: 1;
-    text-align: left;
-  }
-  
-  button:nth-child(2) {
-    background-color: #28a745;
-  }
-  
-  button:nth-child(3) {
-    background-color: #dc3545;
-  }
-  
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+/* Estilos para o formulário de adição de itens */
+form {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para os itens da lista */
+.lista-itens {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.item-text {
+  flex: 1;
+  margin-right: 10px;
+  overflow: hidden;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.item-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.lista-itens button {
+  background: #99ff00;
+  transition: all 0.3s;
+}
+
+.lista-itens button:hover {
+  background: #7fd400;
+  color: white;
+}
+
+/* Estilos para itens completados */
+.item-completed .item-text {
+  color: #99ff00;
+  text-decoration: line-through;
+}
+
+/* Estilos para o botão limpar */
+.btnLimpar {
+  width: 100%;
+  margin-top: 20px;
+}
