@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import AddItem from './components/addItem';
-import Lista from './components/lista';
-import Itens from './components/itens';
+import AddItem from './components/addItem'; // Certifique-se de que "addItem" é exatamente como o nome do arquivo.
+import Lista from './components/lista';     // Certifique-se de que "lista" é exatamente como o nome do arquivo.
 import './styles/App.css';
 
 const App = () => {

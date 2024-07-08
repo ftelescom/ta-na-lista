@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from 'itens';
+import Item from './itens';
 
 const Lista = ({ items, onToggleComplete, onDeleteItem }) => {
   return (
