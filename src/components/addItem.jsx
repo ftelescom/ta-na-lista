@@ -17,7 +17,7 @@ const AddItem = ({ onAddItem }) => {
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        placeholder="Adicione um item"
+        placeholder="5X MASSA PENNE MILANEZA 500G"
       />
       <button type="submit">Adicionar</button>
     </form>

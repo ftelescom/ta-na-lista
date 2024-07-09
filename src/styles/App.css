@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 /* Estilizando o corpo da página para centralizar o conteúdo */
@@ -40,63 +42,73 @@ form {
 form input {
   flex: 1;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   margin-right: 10px;
+  color: #777;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
-  background-color: #007BFF;
+  background-color: #14dee2;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0ec1c4;
 }
 
 /* Estilos para os itens da lista */
-.lista-itens {
+.listaItens {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: #fff;
   overflow: hidden;
 }
 
-.item-text {
+.textoItens {
   flex: 1;
   margin-right: 10px;
   overflow: hidden;
   transition: color 0.3s, text-decoration 0.3s;
+  color: #777;
 }
 
-.item-buttons {
+.btnsItens {
   display: flex;
   gap: 5px;
 }
 
-.lista-itens button {
-  background: #99ff00;
+.btnCheck {
+  background: #28a745;
   transition: all 0.3s;
 }
 
-.lista-itens button:hover {
-  background: #7fd400;
-  color: white;
+.btnCheck:hover {
+  background: #208838;
+}
+
+.btnRemover {
+  background: red!important;
+  transition: all 0.3s;
+}
+
+.btnRemover:hover {
+  background: rgb(209, 0, 0)!important;
 }
 
 /* Estilos para itens completados */
-.item-completed .item-text {
-  color: #99ff00;
+.itemCheck .textoItens {
+  color: #28a745;
   text-decoration: line-through;
 }
 
